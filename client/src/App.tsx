@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import beaver from "./assets/beaver.svg";
 import { ApiResponse } from "shared";
 
@@ -18,7 +18,6 @@ function App() {
       console.log(error);
     }
   }
-  sendRequest2();
 
   async function sendRequest2() {
     try {
@@ -29,6 +28,11 @@ function App() {
       console.log(error);
     }
   }
+
+  // Load initial data on component mount
+  useEffect(() => {
+    sendRequest2();
+  }, []);
 
   return (
     <div className="max-w-xl mx-auto flex flex-col gap-6 items-center justify-center min-h-screen">
@@ -45,7 +49,7 @@ function App() {
       <div className="flex items-center gap-4">
         <button
           onClick={sendRequest}
-          className="bg-black text-white px-2.5 py-1.5 rounded-md">
+          className="bg-black text-white px-2.5 py-1.5 rounded-md hover:cursor-pointer">
           Call API
         </button>
         <a
