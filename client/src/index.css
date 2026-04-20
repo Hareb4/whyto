@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "zain-mob";
+  src: url("./assets/zain-mob-long500.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "camel-bold";
+  src: url("./assets/camel-bold.ttf") format("truetype");
+}
+
+@theme {
+  --font-zain: "zain-mob", ui-sans-serif, sans-serif;
+  --font-camel-bold: "camel-bold", ui-sans-serif, sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
