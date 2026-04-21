@@ -1,6 +1,12 @@
 import { useEffect } from "react";
 import { Download } from "lucide-react";
 
+import iosLight from "./assets/ios-light.png";
+import slide1 from "./assets/Slide 16_9 - 1.png";
+import slide2 from "./assets/Slide 16_9 - 2.png";
+import slide3 from "./assets/Slide 16_9 - 3.png";
+import appReleaseApk from "./assets/app-release.apk?url";
+
 const SERVER_URL =
   import.meta.env.VITE_SERVER_URL || "https://server.hareb-div.workers.dev";
 
@@ -38,7 +44,7 @@ function App() {
               <div className="flex min-w-0 flex-1 items-start gap-4 sm:gap-5">
                 <div className="relative h-[4.5rem] w-[4.5rem] shrink-0 overflow-hidden rounded-[1.25rem] bg-[#1f1f1f] shadow-inner ring-1 ring-white/15 sm:h-[5.5rem] sm:w-[5.5rem]">
                   <img
-                    src={"src/assets/ios-light.png"}
+                    src={iosLight}
                     alt="أيقونة Beaver"
                     className="h-full w-full object-cover"
                   />
@@ -54,7 +60,7 @@ function App() {
               </div>
 
               <a
-                href={"src/assets/app-release.apk"}
+                href={appReleaseApk}
                 download="app-release.apk"
                 className="inline-flex h-12 w-full shrink-0 items-center justify-center gap-2 rounded-2xl bg-[#F7f6f3] px-4 text-sm font-semibold text-[#1a1a1a] transition duration-200 hover:text-[#f7f6f3] hover:bg-[#80493D] hover:cursor-pointer hover:inset-shadow-sm sm:h-12 sm:w-auto sm:min-w-[10rem]">
                 تحميل
@@ -69,17 +75,17 @@ function App() {
               </p>
               <div className="-mx-1 flex gap-3 overflow-x-auto px-1 pb-1 [scrollbar-width:thin] [scrollbar-color:rgba(255,255,255,0.2)_transparent]">
                 <img
-                  src={"src/assets/Slide 16_9 - 1.png"}
+                  src={slide1}
                   alt="لقطة شاشة ١"
                   className="h-80 w-40 shrink-0 rounded-xl object-cover ring-1 ring-white/10"
                 />
                 <img
-                  src={"src/assets/Slide 16_9 - 2.png"}
+                  src={slide2}
                   alt="لقطة شاشة ٢"
                   className="h-80 w-40 shrink-0 rounded-xl object-cover ring-1 ring-white/10"
                 />
                 <img
-                  src={"src/assets/Slide 16_9 - 3.png"}
+                  src={slide3}
                   alt="لقطة شاشة ٣"
                   className="h-80 w-40 shrink-0 rounded-xl object-cover ring-1 ring-white/10"
                 />
