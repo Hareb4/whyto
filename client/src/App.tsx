@@ -61,7 +61,7 @@ function App() {
 
               <a
                 href={appReleaseApk}
-                download="app-release.apk"
+                download
                 className="inline-flex h-12 w-full shrink-0 items-center justify-center gap-2 rounded-2xl bg-[#F7f6f3] px-4 text-sm font-semibold text-[#1a1a1a] transition duration-200 hover:text-[#f7f6f3] hover:bg-[#80493D] hover:cursor-pointer hover:inset-shadow-sm sm:h-12 sm:w-auto sm:min-w-[10rem]">
                 تحميل
                 <Download className="w-4 h-4" />
