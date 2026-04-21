@@ -5,7 +5,7 @@ import iosLight from "./assets/ios-light.png";
 import slide1 from "./assets/Slide 16_9 - 1.png";
 import slide2 from "./assets/Slide 16_9 - 2.png";
 import slide3 from "./assets/Slide 16_9 - 3.png";
-import appReleaseApk from "./assets/app-release.apk?url";
+const appReleaseApk = "https://github.com/Hareb4/whyto/releases/download/app/app-release.apk";
 
 const SERVER_URL =
   import.meta.env.VITE_SERVER_URL || "https://server.hareb-div.workers.dev";
