@@ -59,13 +59,18 @@ function App() {
                 </div>
               </div>
 
-              <a
-                href={appReleaseApk}
-                download
-                className="inline-flex h-12 w-full shrink-0 items-center justify-center gap-2 rounded-2xl bg-[#F7f6f3] px-4 text-sm font-semibold text-[#1a1a1a] transition duration-200 hover:text-[#f7f6f3] hover:bg-[#80493D] hover:cursor-pointer hover:inset-shadow-sm sm:h-12 sm:w-auto sm:min-w-[10rem]">
-                تحميل
-                <Download className="w-4 h-4" />
-              </a>
+              <div className="flex w-full shrink-0 flex-row items-center gap-2 sm:w-auto">
+                <a
+                  href={appReleaseApk}
+                  download
+                  className="inline-flex h-12 min-w-0 flex-1 items-center justify-center gap-2 rounded-2xl bg-[#F7f6f3] px-4 text-sm font-semibold text-[#1a1a1a] transition duration-200 hover:text-[#f7f6f3] hover:bg-[#80493D] hover:cursor-pointer hover:inset-shadow-sm sm:h-12 sm:flex-none sm:min-w-[10rem]">
+                  تحميل
+                  <Download className="h-4 w-4 shrink-0" />
+                </a>
+                <span className="inline-flex shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white/[0.06] px-3 py-2 text-xs font-semibold tracking-wide text-[#F7f6f3]/65">
+                  أندرويد فقط
+                </span>
+              </div>
 
             </div>
 
