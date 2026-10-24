@@ -1,0 +1,104 @@
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Download } from "lucide-react";
+
+import iosLight from "./assets/ios-light.png";
+import slide1 from "./assets/Slide 16_9 - 1.png";
+import slide2 from "./assets/Slide 16_9 - 2.png";
+import slide3 from "./assets/Slide 16_9 - 3.png";
+
+const appReleaseApk =
+  "https://github.com/Hareb4/whyto/releases/download/app/app-release.apk";
+
+function Alrandi() {
+  useEffect(() => {
+    document.title = "الرندي";
+    return () => {
+      document.title = "Hareb";
+    };
+  }, []);
+
+  return (
+    <div
+      dir="rtl"
+      className="min-h-screen bg-[#2c2c2c] text-[#F7f6f3] selection:bg-white/20">
+      <div className="mx-auto flex min-h-screen max-w-lg flex-col gap-10 px-5 py-10 sm:max-w-xl sm:py-14 md:max-w-2xl">
+        <header className="space-y-4 text-right">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-sm text-[#F7f6f3]/60 transition hover:text-[#F7f6f3]">
+            <ArrowRight className="h-4 w-4" />
+            العودة
+          </Link>
+        </header>
+
+        <article className="overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.02] shadow-[0_24px_48px_-12px_rgba(0,0,0,0.45)] ring-1 ring-white/5">
+          <div className="flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:p-8">
+            <div className="flex min-w-0 flex-1 items-start gap-4 sm:gap-5">
+              <div className="relative h-[4.5rem] w-[4.5rem] shrink-0 overflow-hidden rounded-[1.25rem] bg-[#1f1f1f] shadow-inner ring-1 ring-white/15 sm:h-[5.5rem] sm:w-[5.5rem]">
+                <img
+                  src={iosLight}
+                  alt="أيقونة الرندي"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="flex min-w-0 flex-col gap-1.5 pt-0.5 text-right">
+                <h1 className="font-camel-bold text-2xl font-semibold tracking-tight text-[#F7f6f3]">
+                  الرندي
+                </h1>
+                <p className="font-zain text-sm leading-relaxed text-[#F7f6f3]/55">
+                  تطبيق لمحبين الشعر , عبارة عن ويدجت تظهر ابيات شعرية متنوعة
+                </p>
+              </div>
+            </div>
+
+            <div className="flex w-full shrink-0 flex-col items-stretch gap-2 sm:w-auto">
+              <div className="flex w-full flex-row items-center gap-2">
+                <a
+                  href={appReleaseApk}
+                  download
+                  className="inline-flex h-12 min-w-0 flex-1 items-center justify-center gap-2 rounded-2xl bg-[#F7f6f3] px-4 text-sm font-semibold text-[#1a1a1a] transition duration-200 hover:cursor-pointer hover:bg-[#80493D] hover:text-[#f7f6f3] hover:inset-shadow-sm sm:h-12 sm:flex-none sm:min-w-[10rem]">
+                  تحميل
+                  <Download className="h-4 w-4 shrink-0" />
+                </a>
+                <span className="inline-flex shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white/[0.06] px-3 py-2 text-xs font-semibold tracking-wide text-[#F7f6f3]/65">
+                  أندرويد فقط
+                </span>
+              </div>
+              <Link
+                to="/privacy"
+                className="text-center text-xs font-semibold text-[#F7f6f3]/50 underline decoration-white/20 underline-offset-4 transition hover:text-[#F7f6f3]/80">
+                سياسة الخصوصية
+              </Link>
+            </div>
+          </div>
+
+          <div className="border-t border-white/10 bg-black/20 px-6 py-5 sm:px-8">
+            <p className="mb-3 text-right text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-[#F7f6f3]/40">
+              لقطات الشاشة
+            </p>
+            <div className="-mx-1 flex gap-3 overflow-x-auto px-1 pb-1 [scrollbar-width:thin] [scrollbar-color:rgba(255,255,255,0.2)_transparent]">
+              <img
+                src={slide1}
+                alt="لقطة شاشة ١"
+                className="h-80 w-40 shrink-0 rounded-xl object-cover ring-1 ring-white/10"
+              />
+              <img
+                src={slide2}
+                alt="لقطة شاشة ٢"
+                className="h-80 w-40 shrink-0 rounded-xl object-cover ring-1 ring-white/10"
+              />
+              <img
+                src={slide3}
+                alt="لقطة شاشة ٣"
+                className="h-80 w-40 shrink-0 rounded-xl object-cover ring-1 ring-white/10"
+              />
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  );
+}
+
+export default Alrandi;
